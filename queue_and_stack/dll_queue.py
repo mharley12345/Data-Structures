@@ -15,9 +15,11 @@ class Queue:
         self.size += 1
 
     def dequeue(self):
-        if self.size > 0 
+        #Make sure we are not dealing with empty Queue
+        if self.size > 0:
+            #Reduce the size and take out the item from the head (first out), returns the Value stored in that item
             self.size -= 1
-            return self.storage.remove_from_tail(value)
+            return self.storage.remove_from_head()
 
     def len(self):
         return self.size
